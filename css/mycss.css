@@ -42,3 +42,13 @@ p {
     opacity: .9;
     color: #192735;
 }
+
+.mouse {
+    width: 3px;
+    padding: 3px 10px;
+    height: 28px;
+    border: 1.5px solid #d0021b;
+    border-radius: 25px;
+    opacity: .5;
+    box-sizing: content-box;
+}
