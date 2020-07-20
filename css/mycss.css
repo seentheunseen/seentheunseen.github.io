@@ -5,3 +5,17 @@ h1 {
     font-family: Averia Gruesa Libre,serif;
     color: #192735;
 }
+
+section#hero {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 16px;
+    padding: 24px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.slim-wrapper {
+    max-width: 1024px;
+    margin: auto;
+}
