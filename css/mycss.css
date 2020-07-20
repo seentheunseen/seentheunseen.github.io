@@ -179,3 +179,7 @@ section {
 	line-height: 20px;
     text-transform: uppercase;
 }
+
+.progress-list__skill {
+	padding-bottom: 10px;
+}
