@@ -114,6 +114,16 @@ p.about {
     color: white;
 }
 
+.fa-envelope {
+    background: #00b489;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
 .link {
     text-decoration: none;
     color: #125688;
