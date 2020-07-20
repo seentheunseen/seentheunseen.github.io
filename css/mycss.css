@@ -25,6 +25,18 @@ section#case-study .case-block {
     grid-column: span 12;
 }
 
+section#work-exp {
+    padding: 24px;
+}
+
+section#education {
+    padding: 24px;
+}
+
+section#skills {
+    padding: 24px;
+}
+
 .case-block {
     display: flex;
     flex-direction: row;
@@ -73,8 +85,8 @@ p.about {
 
 .fa {
     padding: 20px;
-    font-size: 30px;
-    width: 25px;
+    font-size: 30px !important;
+    /*width: 25px;*/
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -105,6 +117,10 @@ p.about {
     color: #125688;
 }
 
+.links {
+    box-sizing: none !important;
+}
+
 /*body {
   background: #55ACEE;
 }
@@ -112,7 +128,46 @@ p.about {
 section {
   background: #f4f6ff;
 }
+*/
 
-footer {
-  background: #0f4c75;
-}*/
+#footer {
+  margin: 30px;
+}
+
+.resume-list .resume-list__block:before {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #6d56c1;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: #fff;
+    left: 10px;
+}
+
+.resume-list .resume-list__block-title {
+    text-transform: uppercase;
+    color: #6d56c1;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: Roboto Mono,monospace;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.resume-list .resume-list__block {
+    border-left: 2px solid #6d56c1;
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+
+.resume-list .resume-list_title {
+    font-family: Roboto Mono,monospace;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 40px;
+}
