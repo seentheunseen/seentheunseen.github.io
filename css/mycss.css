@@ -15,6 +15,7 @@ section#hero {
     justify-content: center;
     align-items: center;
 }
+
 .slim-wrapper {
     max-width: 1024px;
     margin: auto;
@@ -23,6 +24,7 @@ section#hero {
 section#case-study .case-block {
     grid-column: span 12;
 }
+
 .case-block {
     display: flex;
     flex-direction: row;
