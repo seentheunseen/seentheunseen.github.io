@@ -19,3 +19,24 @@ section#hero {
     max-width: 1024px;
     margin: auto;
 }
+
+section#case-study .case-block {
+    grid-column: span 12;
+}
+.case-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0;
+}
+
+section#case-study .content-ux {
+    padding-bottom: 4em;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    opacity: .9;
+    color: #192735;
+}
