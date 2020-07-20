@@ -1,9 +1,9 @@
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
-    margin-top: 0;
-    font-family: Averia Gruesa Libre, serif;
-    color: #192735;
+h1.name {
+    font-size: 64px !important;
+    margin-bottom: 16px !important;
+    margin-top: 0 !important;
+    font-family: Averia Gruesa Libre, serif !important;
+    color: #192735 !important;
 }
 
 section#hero {
