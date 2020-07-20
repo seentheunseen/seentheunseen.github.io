@@ -91,6 +91,8 @@ p.about {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    width: 70px;
+    height: 70px;
 }
 
 .fa:hover {
@@ -162,12 +164,18 @@ section {
 }
 
 .resume-list .resume-list_title {
-    font-family: Roboto Mono,monospace;
-    font-size: 16px;
+    font-family: Averia Gruesa Libre, serif !important;
+    font-size: 34px;
     line-height: 20px;
-    letter-spacing: 5px;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #999;
+    color: #192735;
     margin-bottom: 40px;
+}
+
+.progress-list__title {
+	color: #192735;
+	font-size: 34px;
+	font-family: Averia Gruesa Libre, serif !important;
+	line-height: 20px;
+    text-transform: uppercase;
 }
