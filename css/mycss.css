@@ -87,18 +87,18 @@ p.about {
     max-width: 600px;
 }
 .scroll-btn{
-    position: relative
+    position: relative;
 }
 
 .scroll-down {
-    position: absolute
-    top: 60px
-    right: 0
-    bottom: 0
-    left: 0
-    margin: auto
-    width: 34px
-    height: 55px
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
 }
 
 .mouse {
@@ -336,4 +336,14 @@ body section {
         line-height: 30px !important;
     }
 
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
