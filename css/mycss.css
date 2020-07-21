@@ -149,7 +149,7 @@ section {
 .resume-list .resume-list__block:before {
     width: 12px;
     height: 12px;
-    border: 2px solid #6d56c1;
+    border: 2px solid #125688;
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -159,7 +159,7 @@ section {
 
 .resume-list .resume-list__block-title {
     text-transform: uppercase;
-    color: #6d56c1;
+    color: #125688;
     font-size: 18px;
     line-height: 20px;
     font-family: Roboto Mono,monospace;
@@ -168,7 +168,7 @@ section {
 }
 
 .resume-list .resume-list__block {
-    border-left: 2px solid #6d56c1;
+    border-left: 2px solid #125688;
     padding-left: 25px;
     padding-bottom: 5px;
 }
@@ -253,7 +253,7 @@ body section {
         font-size: 52px !important;
     }
 
-    section#hero a{
+    section#hero a.scroll-btn{
         display: none
     }
 
