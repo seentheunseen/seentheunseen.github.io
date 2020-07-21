@@ -6,6 +6,28 @@ h1.name {
     color: #192735 !important;
 }
 
+@media (max-width: 1119px)
+.slim-wrapper {
+    padding: 0 24px;
+}
+
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+    section#hero .image {
+        display: none;
+    }
+    section#hero {
+        grid-template-columns: 100% !important;
+        height: 80vh !important;
+    }
+
+    section#hero h1.name{
+        font-size: 52px !important;
+    }
+
+}
+
 section#hero {
     display: grid;
     grid-template-columns: 70% 30%;
