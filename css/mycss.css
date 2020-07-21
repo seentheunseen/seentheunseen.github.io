@@ -301,9 +301,9 @@ body section {
     padding: 0 24px;
 }
 
-
+/* For mobile phones: */
 @media only screen and (max-width:500px) {
-  /* For mobile phones: */
+  
     section#hero .image {
         display: none;
     }
@@ -322,7 +322,7 @@ body section {
         animation: none;
         white-space: normal;
     }
-}
+
 
     section#hero a.scroll-btn{
         display: none
@@ -343,10 +343,8 @@ body section {
     .progress-list__title {
         line-height: 30px !important;
     }
-
-
-
 }
+/* For mobile phones: */
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
