@@ -86,6 +86,20 @@ p.about {
     opacity: .8;
     max-width: 600px;
 }
+.scroll-btn{
+    position: relative
+}
+
+.scroll-down {
+    position: absolute
+    top: 60px
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    width: 34px
+    height: 55px
+}
 
 .mouse {
     width: 3px;
@@ -106,6 +120,20 @@ p.about {
     animation-duration: 3s;
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
 }
 
 .fa {
