@@ -3,7 +3,32 @@ h1.name {
     margin-bottom: 16px !important;
     margin-top: 0 !important;
     font-family: Averia Gruesa Libre, serif !important;
+
     color: #192735 !important;
+    overflow: hidden;
+    border-right: .15em solid #3282b8;
+    margin: 0 auto;
+    letter-spacing: .06em;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    white-space: nowrap;
+}
+
+.about span {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3282b8; }
 }
 
 section#hero {
