@@ -3,8 +3,8 @@ h1.name {
     margin-bottom: 16px !important;
     margin-top: 0 !important;
     font-family: Averia Gruesa Libre, serif !important;
-
     color: #192735 !important;
+
     overflow: hidden;
     border-right: .15em solid #3282b8;
     margin: 0 auto;
@@ -314,7 +314,15 @@ body section {
 
     section#hero h1.name{
         font-size: 52px !important;
+    
+        overflow: auto;
+        border-right: none;
+        margin: auto;
+        letter-spacing: none;
+        animation: none;
+        white-space: normal;
     }
+}
 
     section#hero a.scroll-btn{
         display: none
@@ -335,6 +343,8 @@ body section {
     .progress-list__title {
         line-height: 30px !important;
     }
+
+
 
 }
 
