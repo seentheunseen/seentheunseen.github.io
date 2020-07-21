@@ -13,6 +13,29 @@
 	
 </head>
 <body>
+	<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat"
+	attribution=setup_tool
+	page_id="100846815055538">
+	</div>
 	<section class="slim-wrapper" id="hero"><span class="text">
         <h1 class="name">Bennie Joseph Santos</h1>
         <p class="about">Full Stack Developer and team player. I code for people, share learnings on programming languages and play on my computer.</a> Currently at <a class="link" href="https://www.sss.gov.ph/" target="_blank" alt="SSS">Social Security System.</p>
