@@ -247,6 +247,10 @@ section {
 	padding-bottom: 10px;
 }
 
+.progress-bar {
+    background-color: #125688 !important;
+}
+
 html {
     overflow:   scroll;
     overflow-x: hidden;
