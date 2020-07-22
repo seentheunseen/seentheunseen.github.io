@@ -146,19 +146,22 @@ p.about {
     border-radius: 50%;
     width: 70px;
     height: 70px;
+    background: #125688;
+    color: white;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    background: #1b262c;
+    text-decoration: none;
 }
 
-.fa-facebook {
-    background: #3B5998;
+/*.fa-facebook {
+    background: #125688;
     color: white;
 }
 
 .fa-twitter {
-    background: #55ACEE;
+    background: #125688;
     color: white;
 }
 
@@ -168,14 +171,14 @@ p.about {
 }
 
 .fa-envelope {
-    background: #00b489;
+    background: #125688;
     color: white;
 }
 
 .fa-github {
-    background: black;
+    background: #125688;
     color: white;
-}
+}*/
 
 .link {
     text-decoration: none;
@@ -184,6 +187,10 @@ p.about {
 
 .links {
     box-sizing: none !important;
+}
+
+.links a.hover{
+    pointer-events: none;
 }
 
 /*body {
