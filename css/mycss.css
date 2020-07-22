@@ -305,6 +305,19 @@ body section {
     padding: 0 24px;
 }
 
+@media only screen and (max-width: 1000px) {
+  /* For tablets: */
+    section#hero h1.name{
+        font-size: 49px !important;
+        overflow: auto;
+        border-right: none;
+        margin: auto;
+        letter-spacing: none;
+        animation: none;
+        white-space: normal;
+    }
+}
+
 /* For mobile phones: */
 @media only screen and (max-width:500px) {
   
