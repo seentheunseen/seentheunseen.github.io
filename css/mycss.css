@@ -117,7 +117,7 @@ p.about {
     border-radius: 25%;
     background-color: #d0021b;
     animation-name: scroll;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-timing-function: cubic-bezier(.15,.41,.69,.94);
     animation-iteration-count: infinite;
 }
