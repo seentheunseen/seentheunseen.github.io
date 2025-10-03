@@ -1,246 +1,643 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Bennie Joseph Santos</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/x-icon" href="./images/avatar.png" />
-	<link rel="stylesheet" href="./css/mycss.css">
-	<script type="text/Javascript" src="./js/myjs.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<!-- <script src="./js/jquery-3.5.1.slim.min.js"></script> -->
-	<script type="text/Javascript" src="./js/jquery-3.3.1.min.js"></script>
-	<script type="text/Javascript" src="./js/snap-scroll.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bennie Joseph Santos | Senior Specialist - Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: var(--gray);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(99, 102, 241, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--light);
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--primary);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -59px;
+            top: 40px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--darker);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .company {
+            color: var(--light);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item ul {
+            color: var(--gray);
+            margin-left: 20px;
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 8px;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .contact-item a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray);
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<body id="noselect" oncontextmenu="return false;">
-	<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v7.0'
-          });
-        };
+<body>
+    <div class="gradient-bg"></div>
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+    <nav>
+        <div class="container">
+            <div class="logo">BJS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-	<!-- Your Chat Plugin code -->
-	<div class="fb-customerchat"
-		attribution=setup_tool
-		page_id="100846815055538" 
-		size="small"
-		theme_color="#0084ff">
-	</div>
-	<section class="slim-wrapper" id="hero"><span class="text">
-        <h1 class="name">Bennie Joseph Santos;</h1>
-        <p class="about">
-        	<span><</span><span>p</span><span>></span>
-    		Full Stack Web Developer and a team player. I code for food and share experience on programming. Currently at 
-    		<span><</span><span>a</span><span>></span>
-    		<a class="link" href="https://www.sss.gov.ph/" target="_blank" alt="SSS">Social Security System.</a>
-    		<span><</span><span>/a<span><span>><span>
-    		<span><</span><span>/p<span><span>></span>
-        </p>
-        <a class="scroll-btn" href="#education">
-            <div class="scroll-down">
-                <div class="mouse">
-                    <div class="scroller"></div>
-                </div>
-            </div>
-        </a>
-        </span>
-        <center>
-	        <span class="image">
-	            <img class=" lazyloaded" data-src="/avatar.png" src="./images/avatar.png" alt="Avatar" width="200" height="200">
-	        </span>
-    	</center>
-    </section>
-    <section class="slim-wrapper" id="education">
-    	<div class="row">
-	      <div class="col-md-8 section__resume resume-list">
-	        <h3 class="resume-list_title">Education</h3>
-	        <div class="resume-list__block">
-	          <p class="resume-list__block-title">Nueva Ecija University Of Science And Technology</p>
-	          <p class="resume-list__block-date">2011 - 2015</p>
-	          <p>
-	            Bachelor Of Science In Information Technology
-	          </p>
-	          <p>
-	            Major in Programming
-	          </p>
-	        </div>
-	      </div>
-	    </div>
-    </section>
-    <br>
-    <section class="slim-wrapper" id="work-exp">
-    	<div class="row">
-	      <div class="col-md-8 section__resume resume-list">
-	        <h3 class="resume-list_title">Employment</h3>
-	        <div class="resume-list__block">
-	          <p class="resume-list__block-title">Social Security System</p>
-	          <p class="resume-list__block-date">2018 - Present</p>
-	          <p>
-	            Junior Programmer
-	          </p>
-	        </div>
-	        <div class="resume-list__block">
-	          <p class="resume-list__block-title">DBPSC</p>
-	          <p class="resume-list__block-date">2016 - 2018</p>
-	          <p>
-	            Service Bureau - Special Project - Programmer
-	          </p>
-	        </div>
-	        <div class="resume-list__block">
-	          <p class="resume-list__block-title">OneSys Systems Developers Inc.</p>
-	          <p class="resume-list__block-date">2015 - 2015</p>
-	          <p>
-	            Assistant Programmer
-	          </p>
-	        </div>
-	      </div>
-	    </div>
-    </section>
-    <br>
-    <br>
-    <!-- <section class="slim-wrapper" id="case-study">
-        <div class="content-ux">
-            <div class="case-block">
-                <aside><img src="./Justine Win Canete_files/case-job.a6735982.svg"></aside><span>
-                    <h3>Kalibrr: A Design Exercise</h3>
-                    <p>A design challenge to create a mobile app that helps fresh graduates find jobs.</p><a class="standard-link" href="https://stories.justinewin.com/kalibrr-design-exercise-a-job-search-for-fresh-grads-73ee3e383bb4" target="_blank">Read case study</a>
-                </span>
-            </div>
-            <div class="case-block">
-                <aside><img src="./Justine Win Canete_files/case-agos.d141191b.png"></aside><span>
-                    <h3>Rappler Agos eBayanihan</h3>
-                    <p>A collaborative platform that combines top-down government action with bottom up civic engagement to help communities mitigate risks and deal with climate change and natural hazards.</p><a class="standard-link" href="https://medium.com/@justinewin/redesigning-agos-ebayanihan-a-collaborative-crisis-platform-in-the-philippines-d8849c1aa715" target="_blank">Read case study</a>
-                </span>
-            </div>
-            <div class="case-block">
-                <aside><img src="./Justine Win Canete_files/case-gemfury.04e72f14.png"></aside><span>
-                    <h3>Gemfury</h3>
-                    <p>A design overhaul of Gemfury's marketing website to drive more conversion.</p><a class="standard-link" href="https://stories.justinewin.com/gemfury-b80adbb1442d" target="_blank">Read case study</a>
-                </span>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Bennie Joseph Santos</h1>
+            <h2>Senior Specialist | Full Stack Developer</h2>
+            <p>Crafting innovative solutions with expertise in UI/UX design, Java programming, and enterprise systems at Social Security System</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
             </div>
         </div>
-    </section> -->
-    <section class="slim-wrapper" id="skills">
-    	<div class="row section__resume progress-list js-progress-list">
-			<div class="col-md-12">
-			<h3 class="progress-list__title">General Skills</h3>
-			<br>
-			</div>
-			<div class="col-md-5 mr-auto">
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Java</span>
-			    <span class="progress-list__skill-value">70%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">CSS3</span>
-			    <span class="progress-list__skill-value">60%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Javascript</span>
-			    <span class="progress-list__skill-value">60%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Jquery</span>
-			    <span class="progress-list__skill-value">55%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-			    </div>
-			  </div>
-			</div>
-			</div>
-			<div class="col-md-5 mr-auto">
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Oracle SQL</span>
-			    <span class="progress-list__skill-value">65%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Bootstrap 3</span>
-			    <span class="progress-list__skill-value">40%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">Web Service</span>
-			    <span class="progress-list__skill-value">40%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-			    </div>
-			  </div>
-			</div>
-			<div class="progress-list__skill">
-			  <p>
-			    <span class="progress-list__skill-title">.NET</span>
-			    <span class="progress-list__skill-value">30%</span>
-			  </p>
-			  <div class="progress">
-			    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-			    </div>
-			  </div>
-			</div>
-			</div>
-			</div>
     </section>
-    <br><br>
-    <center>
-	    <footer class="slim-wrapper" id="footer">
-	        <span class="links">
-	            <a href="https://www.facebook.com/bennie1212" target="_blank" class="fa fa-facebook"></a>
-				<a href="https://twitter.com/Seen_The_Unseen" target="_blank" class="fa fa-twitter"></a>
-				<a href="https://github.com/seentheunseen" target="_blank" class="fa fa-github"></a>
-				<a href="https://www.instagram.com/seen_the_unseen/" target="_blank" class="fa fa-instagram"></a>
-				<a href="mailto:bennie0987@gmail.com" target="_blank" class="fa fa-envelope"></a>
-	        </span>
-	        <br><br>
-	        <span class="copyright">
-	        	Copyright © 2020. SeenTheUnseen. All Rights Reserved.
-	        </span>
-	    </footer>
-    </center>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Building Digital Excellence</h3>
+                    <p>I'm a passionate Senior Specialist with over 9 years of experience in software development, specializing in enterprise systems and full-stack development. Currently serving at the Social Security System, I bring expertise in Java, Oracle technologies, and modern UI/UX design.</p>
+                    <p>My journey from Programmer to Senior Specialist has equipped me with a comprehensive understanding of system architecture, database management, and creating user-centric applications that drive organizational efficiency.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>9+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🎨 Frontend Development</h3>
+                    <p>Creating beautiful, responsive user interfaces</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>⚙️ Backend Development</h3>
+                    <p>Building robust server-side applications</p>
+                    <div class="skill-tags">
+                        <span class="tag">Java SE 8</span>
+                        <span class="tag">Oracle</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🗄️ Database Management</h3>
+                    <p>Designing efficient data architectures</p>
+                    <div class="skill-tags">
+                        <span class="tag">Oracle DB</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>🔧 Tools & Technologies</h3>
+                    <p>Leveraging modern development tools</p>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Oracle Service Bus</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Senior Specialist</h3>
+                    <div class="company">Social Security System - Information Systems Department IV</div>
+                    <div class="date">March 2025 - Present</div>
+                    <ul>
+                        <li>Leading enterprise system development initiatives</li>
+                        <li>Architecting scalable solutions for critical government services</li>
+                        <li>Mentoring junior developers and conducting code reviews</li>
+                        <li>Optimizing system performance and database operations</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Senior Programmer</h3>
+                    <div class="company">Social Security System - Information Systems Department IV</div>
+                    <div class="date">August 2022 - March 2025</div>
+                    <ul>
+                        <li>Developed and maintained enterprise-level applications</li>
+                        <li>Implemented Oracle Service Bus integrations</li>
+                        <li>Created user training materials and documentation</li>
+                        <li>Enhanced system security and performance</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Junior Programmer</h3>
+                    <div class="company">Social Security System - Information Systems Department</div>
+                    <div class="date">February 2018 - August 2022</div>
+                    <ul>
+                        <li>Developed Java-based applications for internal systems</li>
+                        <li>Participated in full software development lifecycle</li>
+                        <li>Collaborated with cross-functional teams</li>
+                        <li>Provided technical support and troubleshooting</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Service Bureau Programmer</h3>
+                    <div class="company">Social Security System - Information Systems Department</div>
+                    <div class="date">November 2016 - February 2018</div>
+                    <ul>
+                        <li>Managed database operations and queries</li>
+                        <li>Developed automated reporting systems</li>
+                        <li>Ensured data integrity and security</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Programmer</h3>
+                    <div class="company">OneSys Systems Developers Inc.</div>
+                    <div class="date">August 2015 - October 2015</div>
+                    <ul>
+                        <li>Developed custom software solutions for clients</li>
+                        <li>Performed system testing and quality assurance</li>
+                        <li>Collaborated with design team on UI implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p style="color: var(--gray); font-size: 1.2rem; margin-bottom: 20px;">
+                    I'm always interested in hearing about new opportunities and collaborations
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>📧 Email:</strong><br>
+                        <a href="mailto:bennie0987@gmail.com">bennie0987@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📱 Mobile:</strong><br>
+                        <a href="tel:+639994796402">+63 999 479 6402</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📍 Location:</strong><br>
+                        Quezon City, Metro Manila, Philippines
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bennie Joseph Santos. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.skill-card, .timeline-item, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
